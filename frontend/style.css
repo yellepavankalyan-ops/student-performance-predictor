@@ -1,0 +1,104 @@
+/* 🌌 Background */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+/* 🎯 Main container */
+.container {
+    width: 380px;
+    margin: 80px auto;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+    text-align: center;
+    position: relative;
+}
+
+/* ✨ Glow border */
+.container::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 20px;
+    background: linear-gradient(120deg, #00f2ff, #ff00d4, #00ff9d);
+    z-index: -1;
+    filter: blur(10px);
+    opacity: 0.5;
+}
+
+/* 🎓 Title */
+h2 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* 🧾 Inputs */
+input {
+    width: 92%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+/* Input focus glow */
+input:focus {
+    box-shadow: 0 0 10px #00f2ff;
+}
+
+/* 🚀 Button */
+button {
+    width: 95%;
+    padding: 12px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #00f2ff, #0072ff);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Button hover */
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00f2ff;
+}
+
+/* 📊 Output box */
+.output {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 12px;
+    background: rgba(0,0,0,0.3);
+}
+
+/* 💡 Suggestions */
+#result {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #00ffd5;
+}
+
+/* ✨ Floating animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+
+.container {
+    animation: float 5s ease-in-out infinite;
+}

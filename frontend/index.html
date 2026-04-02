@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Predictor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>🎓 Student Performance Predictor</h2>
+
+    <div class="form">
+        <input id="name" placeholder="Name">
+        <input id="roll" placeholder="Roll No">
+        <input id="marks" placeholder="Marks">
+        <input id="attendance" placeholder="Attendance">
+        <input id="cgpa" placeholder="CGPA">
+
+        <button onclick="predict()">Predict</button>
+    </div>
+
+    <div class="output">
+        <h3 id="result"></h3>
+        <p id="suggestions"></p>
+    </div>
+</div>
+<button class="b1" onclick="goToRecords()">View All Predictions</button>
+<script src="script.js"></script>
+
+</body>
+</html>
